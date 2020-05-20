@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Planets</title>
+    <script src="planets.js"></script>
+
+    <style>
+        body{
+            overflow: hidden;
+            margin: 0;
+        }
+        #canvas{
+            position: absolute;
+        }
+
+        #bgCanvas{
+            position: absolute;
+        }
+
+        #quizPanel{
+            position: fixed;
+            width: 100%;
+            top: 240px;
+            user-select: none;
+        }
+
+        #innerPanel{
+            background-color: lightgray;
+            border-radius: 20px;
+            max-width: 720px;
+            margin: 32px auto;
+
+            padding: 16px;
+            font-size: 32px;
+            opacity: 0.75;
+        }
+        
+        #innerPanel h4{
+            color: #555555;
+            margin: 0 0 16px 0;
+            font-size: 24px;
+        }
+
+        #next{
+            border-radius: 8px;
+            margin-top: 16px;
+            font-size: 24px;
+        }
+        
+        #operations{
+            position: fixed;
+            opacity: 0.5;       
+            padding: 16px;
+            top: 16px;
+            left: 16px;
+            color: black;
+            
+            user-select: none;
+        }
+
+        #operations button{
+            border-radius: 8px;
+            font-size: 24px;
+            width: 48px;
+            height: 48px;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <canvas id="bgCanvas" width="900" height="900"></canvas>
+    <canvas id="canvas" width="900" height="900"></canvas>
+
+    <div id="operations">
+        <button id="down">↓</button>
+        <button id="up">↑</button>
+        <button id="left">←</button>
+        <button id="right">→</button>
+        <button id="in">+</button>
+        <button id="out">-</button>
+        <button id="quiz">?</button>
+    </div>
+
+    <div id="quizPanel" class="hidden">
+        <div id="innerPanel">
+            <h4 id="quizHeader"></h4>
+
+            <div id="q1">
+                What is the hottest planet?
+            </div>
+
+            <div id="q2" class="hidden">
+                How many planets are in our solar system?
+            </div>
+
+            <div id="q3" class="hidden">
+                What is the coldest planet?
+            </div>
+
+            <div id="q4" class="hidden">
+                What is the 2nd largest planet?
+            </div>
+
+            <div id="q5" class="hidden">
+                Is our Moon a planet. Explain your answer?
+            </div>
+
+            <div id="q6" class="hidden">
+                Which planets have rings?
+            </div>
+
+            <div id="q7" class="hidden">
+                Name the gas planets?
+            </div>
+
+            <div id="q8" class="hidden">
+                How long does it take the Earth to go around the Sun?
+            </div>
+
+            <div id="q9" class="hidden">
+                Name all planets in order from closest to farthest from the Sun?
+            </div>
+
+            <div id="q10" class="hidden">
+                How long does it take sunlight to reach the Earth?
+            </div>
+
+            <div id="q11" class="hidden">
+                What is the 2nd smallest planet?
+            </div>
+
+            <div id="q12" class="hidden">
+                What planet has the largest active volcano?
+            </div>
+
+            <div id="q13" class="hidden">
+                What is the sun made of?
+            </div>
+
+            <div id="q14" class="hidden">
+                Does the moon have an atmosphere? 
+            </div>
+
+            <div id="q15" class="hidden">
+                Why is Mars red? 
+            </div>
+
+            <div id="q16" class="hidden">
+                Why is the Earth called "The blue planet"?
+            </div>
+
+            <div id="q17" class="hidden">
+                How old is the sun?
+            </div>
+
+            <div id="q18" class="hidden">
+                What planet has the closest size to Earth?
+            </div>
+
+            <div id="q19" class="hidden">
+                How many phases does ous moon have?
+            </div>
+
+            <div id="q20" class="hidden">
+                Why does the moon shine?
+            </div>
+
+            <div>
+                <button id="next">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
